@@ -17,8 +17,7 @@ random module
 
 1.Clone the repository
 
-git clone https://github.com/kartikpadayachi14/python-mini-projects.git
-cd python-mini-projects
+https://github.com/kartikpadayachi14/pyton-mini-projects/blob/26779733a8497541faa05cc27e4d0fd4d96982ad/dice_roller.py
 
 2.Run the script
 
