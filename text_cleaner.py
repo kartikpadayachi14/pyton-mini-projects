@@ -1,16 +1,16 @@
-from datetime import datetime
+import string
 
-mood = input("How are you feeling today (e.g., happy, tired)?")
-entry =input("Write a short entry about your day:")
+sentence = input("Enter text: ")
+sentence = sentence.lower()
 
-today = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-journal_entry = f"""Date: {today}
-Mood: {mood}
-Entry: {entry}
-{'-'*40}
-"""
+for ch in string.punctuation:
+    sentence = sentence.replace(ch, "")
 
-with open("journal.txt","a", encoding= "utf-8") as file:
-    file.write(journal_entry)
+words = sentence.split()
+print("Words:", len(words))
+print("Unique:", set(words))
 
-print("Your entry has been saved to journal.txt!")
+freq = {}
+for w in words:
+    freq[w] = freq.get(w,0)+1
+    print("Grequency:",freq)
